@@ -1,17 +1,33 @@
-shopping_list = [
-    "* carrots", 
-    "* chummus", 
-    "* pickles"
-  ]
-shopping_list << "* apples"
+grocery_list = [
+  "carrots", 
+  "toilet paper", 
+  "apples", 
+  "salmon",
+  
+]
+grocery_list.pop
+grocery_list << "rice"
 
-puts shopping_list
 
-def shopping_list(a)
-    puts a 
+def supermarket(grocery_list)
+
+  grocery_list.sort.each do |item|
+    
+  puts "* #{item}"
+  end 
+  puts "you have #{grocery_list.length} items"
+  
+  
+ 
+
+  if grocery_list.include? "bananas"
+    puts "You will have to p/u bananas"
+  else 
+    puts "you can continue shopping"
+  end 
+  puts grocery_list[1]
+  
 end 
 
-puts shopping_list.length
-
-shopping_list.include?("bananas")
+supermarket(grocery_list)
 
